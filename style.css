@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(206, 230, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.603);
+    overflow: hidden;
+}
+
+div::before {
+    content: '';
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    background: conic-gradient(
+        red, 
+        blue,
+        green, 
+        yellow, 
+        orange,
+        orangered
+    );
+    left: -25%;
+    top: -25%;
+    animation: animate 10s infinite;
+    filter: blur(0.5px);
+}
+
+div::after {
+    content: "Gradient border Made By Berdia Bekauri";
+    position: absolute;
+    background-color: white;
+    width: 93%;
+    height: 93%;
+    top: 3.5%;
+    left: 3.5%;
+    display: grid;
+    place-items: center;
+    letter-spacing: 3px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
